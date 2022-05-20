@@ -1,0 +1,39 @@
+{
+  "name": "duration-string",
+  "version": "1.0.0",
+  "description": "A JavaScript library for working with time durations.",
+  "main": "src/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "scripts": {
+    "test": "tsc && npx jasmine",
+    "start": "ts-node-dev --respawn src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joker876/duration-string.git"
+  },
+  "keywords": [
+    "duration",
+    "time",
+    "tostring",
+    "to-string",
+    "time-duration"
+  ],
+  "devDependencies": {
+    "@types/jasmine": "^4.0.3",
+    "jasmine": "^4.1.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  },
+  "author": "joker876",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joker876/duration-string/issues"
+  },
+  "homepage": "https://github.com/joker876/duration-string#readme"
+}
