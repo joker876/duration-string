@@ -1,6 +1,6 @@
 {
   "name": "duration-string",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A JavaScript library for working with time durations.",
   "main": "src/index.js",
   "types": "dist/index.d.ts",

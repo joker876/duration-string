@@ -41,22 +41,25 @@ class Duration {
         this.date_lower = date1;
         this.date_higher = date2;
 
-        this.milliseconds = date2.valueOf() - date1.valueOf();
-        this.seconds = this.milliseconds / DURATIONS.s;
-        this.minutes = this.milliseconds / DURATIONS.min;
-        this.hours = this.milliseconds / DURATIONS.h;
-        this.days = this.milliseconds / DURATIONS.d;
-        this.months = this.milliseconds / DURATIONS.m;
-        this.years = this.milliseconds / DURATIONS.y;
-
-        let ms = this.milliseconds;
+        let ms = date2.valueOf() - date1.valueOf();
+        //total
+        this.years = ms / DURATIONS.y;
+        this.months = ms / DURATIONS.m;
+        this.weeks = ms / DURATIONS.w;
+        this.days = ms / DURATIONS.d;
+        this.hours = ms / DURATIONS.h;
+        this.minutes = ms / DURATIONS.min;
+        this.seconds = ms / DURATIONS.s;
+        this.milliseconds = ms;
         
+        //trailing
         this.trailing_years = Math.floor(ms / DURATIONS.y);
         ms %= DURATIONS.y;
 
         this.trailing_months = Math.floor(ms / DURATIONS.m);
         ms %= DURATIONS.m;
 
+        this.trailing_weeks = Math.floor(ms / DURATIONS.w);
         this.trailing_days = Math.floor(ms / DURATIONS.d);
         ms %= DURATIONS.d;
 
@@ -199,3 +202,5 @@ function roundTo(number: number, decimalPlaces = 1) {
 }
 
 export { Duration };
+
+console.log(new Duration(new Date('2020-01-01T03:24:01'), new Date('2021-03-24T08:11:56.176')));
